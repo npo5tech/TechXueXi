@@ -69,7 +69,7 @@ def start_learn(uid, name):
         print(msg)
         gl.pushprint(msg, chat_id=uid)
         driver_login = Mydriver()
-        cookies = driver_login.login()
+        cookies = driver_login.login(uid)
         driver_login.quit()
         if not cookies:
             print("登录超时")
